@@ -24,6 +24,16 @@ declare module 'react-native-copilot' {
   };
 
   /**
+   * Available labels to localize
+   */
+  export type Labels = {
+    previous?: string;
+    next?: string;
+    skip?: string;
+    finish?: string;
+  };
+
+  /**
    * Options for the copilot HOC
    */
   export type CopilotOptions = {
@@ -35,6 +45,7 @@ declare module 'react-native-copilot' {
     backdropColor?: string; // You can customize the mask color - default is rgba(0, 0, 0, 0.4)
     verticalOffset?: number; // In order to adjust vertical position
     stopOnOutsideClick?: boolean; // Whether the tutorial should stop after clicking outside the step component
+    labels?: Labels; // In order to localize labels
   };
 
   /**
